@@ -14,11 +14,11 @@ class ChartDonut extends Component {
         new Chart(myPieChart, {
             type: 'doughnut',
             data: {
-                labels: ["Direct", "Referral", "Social"],
+                labels: ["India ","Europe ","Australia ","Antarctica ","Africa ", "Asia", "USA"],
                 datasets: [{
-                    data: [55, 30, 15],
-                    backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-                    hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+                    data: [25,18,14,12,20,5,5],
+                    backgroundColor:['#2e59d9', '#17a673', '#237d05', '#0062b3', '#4d3ca6', '#913ca6','##f70a1e'],
+                    hoverBackgroundColor: ['#2e59d9', '#17a673', '#237d05', '#0062b3', '#4d3ca6', '#913ca6','##f70a1e'],
                     hoverBorderColor: "rgba(234, 236, 244, 1)",
                 }],
             },
@@ -44,13 +44,12 @@ class ChartDonut extends Component {
 
     render() {
         return (
-            <CardBasic title="Donut Chart">
+            <CardBasic title="Regional Graph">
                  <div className="chart-pie pt-4">
                         <canvas id="myPieChart" ref={this.chartRef}></canvas>
                     </div>
                     <hr />
-                    Styling for the donut chart can be found in the <code>/Components/Charts/Donut/index.js</code> file.
-            </CardBasic>
+             </CardBasic>
         )
     }
 }

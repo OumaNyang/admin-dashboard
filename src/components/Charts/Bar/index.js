@@ -10,8 +10,7 @@ class ChartBar extends Component {
                     <canvas id="myBarChart"></canvas>
                 </div>
                 <hr />
-                Styling for the bar chart can be found in the < code > /js/demo / chart - bar - demo.js</code > file.
-                    </CardBasic>
+                     </CardBasic>
         )
     }
 }

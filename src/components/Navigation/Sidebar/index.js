@@ -6,30 +6,29 @@ import { bindActionCreators } from 'redux';
 import { clickMenuOpen } from '../../../redux/actions';
 
 class Sidebar extends Component {
-  // componentDidMount() {
-  //   document.getElementById('body').className = 'page-top';
-  // }
-  // state = {
-  //   sidebarToggled: false,
-  // }
+  componentDidMount() {
+    document.getElementById('body').className = 'page-top';
+  }
+  state = {
+    sidebarToggled: false,
+  }
 
-  // handleSideBarToggle() {
-  //   if (this.sidebarToogled === true) {
-  //     this.setState({ sidebarToggled: !this.state.sidebarToggled });
-  //     document.getElementById('body').className = 'page-top sidebar-toggled';
-  //   } else {
-  //     this.setState({ sidebarToggled: !this.state.sidebarToggled });
-  //     document.getElementById('body').className = 'page-top';
-  //   }
-
-  // }
+  handleSideBarToggle() {
+    if (this.sidebarToogled === true) {
+      this.setState({ sidebarToggled: !this.state.sidebarToggled });
+      document.getElementById('body').className = 'page-top sidebar-toggled';
+    } else {
+      this.setState({ sidebarToggled: !this.state.sidebarToggled });
+      document.getElementById('body').className = 'page-top';
+    }
+  }
 
   render() {
+
     const { clickMenuOpen, toggled } = this.props;
     return (
       <ul className={toggled ? 'navbar-nav bg-primary sidebar sidebar-dark accordion toggled' : 'navbar-nav bg-gradient-primary sidebar sidebar-dark accordion'} id="accordionSidebar">
 
-        {/* <!-- Sidebar - Brand --> */}
         <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
           <div className="sidebar-brand-icon rotate-n-15">
             <i className="fas fa-heart"></i>
@@ -77,7 +76,7 @@ class Sidebar extends Component {
 
         <li className="nav-item">
           <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" aria-expanded="true" aria-controls="collapseUtilities">
-            <i className="fas fa-fw fa-report"></i>
+            <i className="fas fa-fw fa-snoflake-o"></i>
             <span>Reports</span>
           </a>
           <div id="collapseReports" className="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -90,7 +89,6 @@ class Sidebar extends Component {
         </li>
  
      
-
          <li className="nav-item">
           <Link className="nav-link" to="/settings">
             <i className="fas fa-fw fa-cogs"></i>
@@ -99,7 +97,7 @@ class Sidebar extends Component {
 
          <li className="nav-item">
         
-         <Link className="nav-link" to="/settings">
+         <Link className="nav-link" onClick={()=>{}}>
             <i className="fas fa-sign-out-alt"></i>
             <span>Logout</span></Link>
         </li>

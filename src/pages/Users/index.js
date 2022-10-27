@@ -1,88 +1,79 @@
 import React, { Component } from 'react';
 
+//Cards
+import CardBasic from '../../components/Cards/Basic';
+import PageHeading from '../../components/PageHeading';
 //Navigation
 import Sidebar from '../../components/Navigation/Sidebar';
 import Topbar from '../../components/Navigation/Topbar';
+//  import Table from '../../components/Tables';
 
-import CardInfo from '../../components/Cards/Info';
-import ChartDonut from '../../components/Charts/Donut';
-import ChartLine from '../../components/Charts/Line';
-import PageHeading from '../../components/PageHeading';
 
 class Users extends Component {
-  componentWillMount() {
-    document.getElementById('body').className = 'page-top'
-  }
+    render() {
+        return (
+            <div>
+                <div id="wrapper">
 
-  render() {
-    return (
-      <div>
-        <div id="wrapper">
+                    <Sidebar />
+                    <div id="content-wrapper" className="d-flex flex-column">
 
-          <Sidebar />
+                        <div id="content">
 
-          <div id="content-wrapper" className="d-flex flex-column">
+                            <Topbar />
 
-            <div id="content">
+                            <div className="container-fluid">
 
-              <Topbar />
-
-              <div className="container-fluid">
-
-                <PageHeading title="Dashboard" />
-
-                <div className="row">
-                  <CardInfo title="Earnings (Monthly)"
-                    icon="calendar"
-                    color="primary"
-                    value="$40,000" />
-
-                  <CardInfo title="Earnings (Annual)"
-                    icon="calendar"
-                    color="success"
-                    value="215,000" />
-
-                  <CardInfo title="Tasks"
-                    icon="clipboard"
-                    color="info"
-                    value="50%" />
-
-                  <CardInfo title="Pending Requests"
-                    icon="comments"
-                    color="warning"
-                    value="18" />
+                                <div className="row">
+                                    <div class="col-lg-12">
+                                        <CardBasic title="Registered App Users">
+                                        <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Age</th>
+                                            <th>Amount</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                               
+                                    <tbody>                                
+                                    
+                                        <tr>
+                                            <td>Serge Baldwin</td>
+                                            <td>Data Coordinator</td>
+                                            <td>Singapore</td>
+                                            <td>64</td>
+                                            <td>2012/04/09</td>
+                                            <td>$138,575</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>Zorita Serrano</td>
+                                            <td>Software Engineer</td>
+                                            <td>San Francisco</td>
+                                            <td>56</td>
+                                            <td>2012/06/01</td>
+                                            <td>$115,000</td>
+                                        </tr>
+                                      
+                                      </tbody>
+                                </table>
+                            </div>
+                </CardBasic>
                 </div>
-                <div className="row">
-                  <div className="col-xl-8 col-lg-6">
-                    <ChartLine />
-                  </div>
-                  <div className="col-xl-4 col-lg-6">
-                    <ChartDonut />
-                  </div>
-
+                </div>          
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-              </div>
-
             </div>
 
-            <footer className="sticky-footer bg-white">
-              <div className="container my-auto">
-                <div className="copyright text-center my-auto">
-                  <span>Copyright &copy; Your Website 2019</span>
-                </div>
-              </div>
-            </footer>
-
-          </div>
-
-        </div>
-
-        <a className="scroll-to-top rounded" href="#page-top">
-          <i className="fas fa-angle-up"></i>
-        </a></div>
-    )
-  }
+        )
+    }
 }
 
 export default Users;

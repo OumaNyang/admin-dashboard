@@ -108,7 +108,6 @@ class ChartLine extends Component {
                     <canvas id="myAreaChart" ref={this.chartRef}></canvas>
                 </div>
                 <hr />
-                Styling for the area chart can be found in the <code>/Components/Charts/Line/Index.js</code> file.
             </CardBasic>
         )
     }

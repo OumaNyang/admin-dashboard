@@ -29,9 +29,7 @@ class Dashboard extends Component {
  
                 <div className="container-fluid">
 
-
                 <PageHeading title="Dashboard" />
-
                 <div className="row">
                   <CardInfo title="Recent Reportings"
                     icon="pin"
