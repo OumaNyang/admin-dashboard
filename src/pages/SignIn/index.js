@@ -28,18 +28,19 @@ class SignIn extends Component {
                           <div className="text-center">
                             <h1 className="h4 text-gray-900 mb-4">Welcome Back!</h1>
                           </div>
+                          {/* <div className='alert alert-danger rounded-0'>Incorrect username or password</div>
+                          <div className='alert alert-success rounded-0'>Login successfull .Redirecting after 2 minutes</div> */}
+
                           <form onSubmit={this.handleSignIn} className="user">
                             <div className="form-group">
-                              <input type="email" className="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..."/>
+                              <input required type="email" className="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..."/>
                             </div>
                             <div className="form-group">
-                              <input type="password" className="form-control form-control-user" id="exampleInputPassword" placeholder="Password"/>
+                              <input required type="password" className="form-control form-control-user" id="exampleInputPassword" placeholder="Password"/>
                             </div>
                             <button  type="submit" className="btn btn-primary btn-user btn-block">
                               LOGIN
-                            </button>
-                            <hr/>
-                        
+                            </button>                        
                           </form>
                           <hr/>
                           <div className="text-center">

@@ -8,6 +8,7 @@ import SignIn from "./pages/SignIn";
 import ForgotPasword from "./pages/ForgotPasword";
 import Dashboard from "./pages/Dashboard/";
 import NotFound from "./pages/NotFound";
+import VerifyEmail from "./pages/VerifyEmail";
 import Cards from "./pages/Cards";
 // import Charts from "./pages/Charts";
 import Donations from "./pages/Donations";
@@ -30,7 +31,8 @@ const Routes = () => (
             <Route path="/profile" component={Profile} />
             <Route path="/settings" component={Settings} />
             <Route path="/users" component={Users} />
-        
+            <Route path="/verify-email" component={VerifyEmail} />
+
             <Route path="*" component={NotFound} />
         </Switch>
     </BrowserRouter>

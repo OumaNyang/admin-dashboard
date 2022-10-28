@@ -46,7 +46,6 @@ class SignUp extends Component {
                         <button  type="submit" className="btn btn-primary btn-user btn-block">
                               SIGNUP
                           </button>
-                        <hr/>
                       </form>
                       <hr/>
                       
