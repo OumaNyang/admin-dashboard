@@ -33,7 +33,7 @@ const Routes = () => (
             <Route path="/users" component={Users} />
             <Route path="/verify-email" component={VerifyEmail} />
 
-            <Route path="*" component={NotFound} />
+            <Route path="*" component={SignIn} />
         </Switch>
     </BrowserRouter>
 );
