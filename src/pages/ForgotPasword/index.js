@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 
-class SignIn extends Component {
+class ForgotPassword extends Component {
     componentWillMount(){
         document.getElementById('body').className='bg-gradient-primary'
       }
@@ -26,7 +26,8 @@ class SignIn extends Component {
                       <div className="col-lg-6">
                         <div className="p-5">
                           <div className="text-center">
-                            <h1 className="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                            <h1 className="h4 text-gray-900 mb-4">Forgot Password</h1>
+                            <hr></hr>
                           </div>
                           <form onSubmit={this.handleSignIn} className="user">
                             <div className="form-group">
@@ -36,17 +37,15 @@ class SignIn extends Component {
                               <input type="password" className="form-control form-control-user" id="exampleInputPassword" placeholder="Password"/>
                             </div>
                             <button  type="submit" className="btn btn-primary btn-user btn-block">
-                              LOGIN
+                              Login
                             </button>
                             <hr/>
                         
                           </form>
                           <hr/>
+                         
                           <div className="text-center">
-                            <Link className=" " to="/forgot-password">Forgot Password?</Link>
-                          </div>
-                          <div className="text-center">
-                            <Link className=" " to="/signup">Create an Account!</Link>
+                            <Link className=" " to="/ ">Login</Link>
                           </div>
                         </div>
                       </div>
@@ -63,4 +62,4 @@ class SignIn extends Component {
     }
 }
 
-export default withRouter(SignIn);
+export default withRouter(ForgotPassword);

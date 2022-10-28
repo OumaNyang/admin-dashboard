@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-
 //Cards
 import CardBasic from '../../components/Cards/Basic';
 //Navigation
@@ -17,15 +16,11 @@ class Settings extends Component {
                     <div id="content-wrapper" className="d-flex flex-column">
 
                         <div id="content">
-
                             <Topbar />
-
                             <div className="container-fluid">
-                      
                                 <div className="row">
                                     <div class="col-lg-12">
                                         <CardBasic title="Setting">
-                                        
                                            These are app settings                                      
                                         </CardBasic>
                                     </div>
