@@ -1,6 +1,7 @@
 {
   "name": "sb-admin-2-react",
   "version": "0.1.0",
+  "main": "src/index.js",
   "homepage": "https://oumanyang.github.io/admin-dashboard/",
   "private": true,
   "dependencies": {
